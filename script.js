@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initIdeasPanels();
   initLiveMascot();
+  initCommentsSection();
 });
 
 /* ==========================================================================
@@ -541,6 +542,12 @@ function initLiveMascot() {
     }
   }
 
+  // Global helper to trigger mascot reaction from comments or interactions
+  window.triggerNovaReaction = (msg, motion = 'cheering', emote = '💬') => {
+    updateMascotPlacement('right');
+    setMascotMotion(motion, msg, emote, 3200);
+  };
+
   function showMessage(msg) {
     if (!speechBubble || !bubbleText) return;
     bubbleText.style.opacity = '0';
@@ -733,6 +740,14 @@ function initLiveMascot() {
       msg: "Got questions? Everything you need to know is here! ❓", 
       emote: '❓', 
       side: 'right' 
+    },
+    { 
+      id: 'comments', 
+      motion: 'sitting', 
+      restingPose: 'sitting',
+      msg: "Have an idea or thought? We'd love to hear it! 💬✨", 
+      emote: '💬', 
+      side: 'right' 
     }
   ];
 
@@ -866,4 +881,290 @@ function initLiveMascot() {
     });
   }
 }
+
+/* ==========================================================================
+   8. COMMENTS SECTION (The Conversation Continues)
+   ========================================================================== */
+function initCommentsSection() {
+  const form = document.getElementById('comment-form');
+  const nameInput = document.getElementById('comment-name');
+  const textInput = document.getElementById('comment-text');
+  const charCounter = document.getElementById('comment-char-count');
+  const nameError = document.getElementById('name-error');
+  const textError = document.getElementById('comment-error');
+  const submitBtn = document.getElementById('comment-submit-btn');
+  const alertEl = document.getElementById('comment-success-alert');
+  const feed = document.getElementById('comments-feed');
+  const emptyState = document.getElementById('comments-empty-state');
+  const countBadge = document.getElementById('comments-count-badge');
+
+  if (!form || !feed) return;
+
+  const STORAGE_KEY = 'designverse_comments_list';
+  const MAX_CHARS = 400;
+
+  // Minimal, transparent demonstration comments (clearly labeled as Demo Preview)
+  const INITIAL_DEMO_COMMENTS = [
+    {
+      id: 'demo-1',
+      name: 'Maya Lin',
+      text: 'Looking forward to the rapid prototyping lab! Excited to see multidisciplinary students build together.',
+      time: 'Demo thought',
+      timestamp: Date.now() - 3600000 * 2,
+      isDemo: true
+    },
+    {
+      id: 'demo-2',
+      name: 'Arjun Mehta',
+      text: 'Will the keynote session be recorded or streamed for students who have overlapping workshop timings?',
+      time: 'Demo thought',
+      timestamp: Date.now() - 3600000 * 5,
+      isDemo: true
+    }
+  ];
+
+  // Load comments from localStorage or initialize with demo list
+  function loadComments() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored !== null) {
+        return JSON.parse(stored);
+      }
+      // Seed demo comments on initial visit
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(INITIAL_DEMO_COMMENTS));
+      return [...INITIAL_DEMO_COMMENTS];
+    } catch (e) {
+      console.warn('LocalStorage unavailable, using session state:', e);
+      return [...INITIAL_DEMO_COMMENTS];
+    }
+  }
+
+  function saveComments(list) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    } catch (e) {
+      console.warn('Unable to persist comments:', e);
+    }
+  }
+
+  let comments = loadComments();
+
+  // Escape HTML to prevent XSS
+  function escapeHTML(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  // Generate deterministic avatar gradient from name
+  function getAvatarStyle(name) {
+    const gradients = [
+      'linear-gradient(135deg, #4353F5 0%, #2A36C7 100%)', // Cobalt
+      'linear-gradient(135deg, #FF6855 0%, #E04E3B 100%)', // Coral
+      'linear-gradient(135deg, #202127 0%, #3D404D 100%)', // Charcoal
+      'linear-gradient(135deg, #5C6BF0 0%, #4353F5 100%)', // Electric Blue
+      'linear-gradient(135deg, #E65C47 0%, #FF6855 100%)'  // Warm Coral
+    ];
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const index = Math.abs(hash) % gradients.length;
+    return gradients[index];
+  }
+
+  // Format relative time
+  function formatRelativeTime(timestamp, fallback) {
+    if (fallback && typeof fallback === 'string' && !timestamp) return fallback;
+    if (!timestamp) return 'Just now';
+    const diff = Math.floor((Date.now() - timestamp) / 1000);
+    if (diff < 60) return 'Just now';
+    if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+    if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+    return `${Math.floor(diff / 86400)}d ago`;
+  }
+
+  // Render the comments list
+  function renderComments() {
+    feed.innerHTML = '';
+
+    if (comments.length === 0) {
+      if (emptyState) emptyState.hidden = false;
+      if (countBadge) countBadge.textContent = '0 Thoughts';
+      return;
+    }
+
+    if (emptyState) emptyState.hidden = true;
+    if (countBadge) {
+      countBadge.textContent = `${comments.length} ${comments.length === 1 ? 'Thought' : 'Thoughts'}`;
+    }
+
+    comments.forEach(c => {
+      const card = document.createElement('article');
+      card.className = 'comment-card';
+      card.setAttribute('data-id', c.id);
+
+      const initial = (c.name || 'A').trim().charAt(0).toUpperCase();
+      const avatarBg = getAvatarStyle(c.name || 'Anonymous');
+      const timeStr = c.timestamp ? formatRelativeTime(c.timestamp, c.time) : (c.time || 'Just now');
+
+      card.innerHTML = `
+        <div class="comment-avatar" style="background: ${avatarBg}" aria-hidden="true">${escapeHTML(initial)}</div>
+        <div class="comment-content">
+          <div class="comment-meta">
+            <div class="comment-author-wrap">
+              <span class="comment-author-name">${escapeHTML(c.name)}</span>
+              ${c.isDemo ? '<span class="comment-demo-badge">Demo Preview</span>' : ''}
+            </div>
+            <div class="comment-meta-right">
+              <time class="comment-timestamp" datetime="${new Date(c.timestamp || Date.now()).toISOString()}">${escapeHTML(timeStr)}</time>
+              <button type="button" class="comment-delete-btn" title="Remove this thought" aria-label="Remove thought by ${escapeHTML(c.name)}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <p class="comment-body-text">${escapeHTML(c.text)}</p>
+        </div>
+      `;
+
+      // Delete action
+      const deleteBtn = card.querySelector('.comment-delete-btn');
+      deleteBtn.addEventListener('click', () => {
+        comments = comments.filter(item => item.id !== c.id);
+        saveComments(comments);
+        renderComments();
+      });
+
+      feed.appendChild(card);
+    });
+  }
+
+  // Character counter listener
+  textInput.addEventListener('input', () => {
+    const len = textInput.value.length;
+    charCounter.textContent = len;
+    if (len > 360) {
+      charCounter.classList.add('warning');
+    } else {
+      charCounter.classList.remove('warning');
+    }
+    // Clear error while typing if valid
+    if (textInput.value.trim().length >= 5) {
+      textError.textContent = '';
+      textInput.classList.remove('input-error');
+    }
+  });
+
+  nameInput.addEventListener('input', () => {
+    if (nameInput.value.trim().length >= 2) {
+      nameError.textContent = '';
+      nameInput.classList.remove('input-error');
+    }
+  });
+
+  // Success alert dismissal timer
+  let alertTimeout = null;
+  function showSuccessAlert() {
+    if (!alertEl) return;
+    alertEl.hidden = false;
+    clearTimeout(alertTimeout);
+    alertTimeout = setTimeout(() => {
+      alertEl.hidden = true;
+    }, 4500);
+  }
+
+  // Form submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const authorVal = nameInput.value.trim();
+    const commentVal = textInput.value.trim();
+    let hasError = false;
+
+    // Validate Name
+    if (!authorVal) {
+      nameError.textContent = 'Please enter your name.';
+      nameInput.classList.add('input-error');
+      hasError = true;
+    } else if (authorVal.length < 2) {
+      nameError.textContent = 'Name must be at least 2 characters.';
+      nameInput.classList.add('input-error');
+      hasError = true;
+    } else if (authorVal.length > 50) {
+      nameError.textContent = 'Name must be 50 characters or less.';
+      nameInput.classList.add('input-error');
+      hasError = true;
+    } else {
+      nameError.textContent = '';
+      nameInput.classList.remove('input-error');
+    }
+
+    // Validate Comment Text
+    if (!commentVal) {
+      textError.textContent = 'Please enter your thought or comment.';
+      textInput.classList.add('input-error');
+      hasError = true;
+    } else if (commentVal.length < 5) {
+      textError.textContent = 'Please share a bit more (at least 5 characters).';
+      textInput.classList.add('input-error');
+      hasError = true;
+    } else if (commentVal.length > MAX_CHARS) {
+      textError.textContent = `Comment exceeds ${MAX_CHARS} characters maximum.`;
+      textInput.classList.add('input-error');
+      hasError = true;
+    } else {
+      textError.textContent = '';
+      textInput.classList.remove('input-error');
+    }
+
+    if (hasError) {
+      if (nameInput.classList.contains('input-error')) {
+        nameInput.focus();
+      } else {
+        textInput.focus();
+      }
+      return;
+    }
+
+    // Valid submission: create new comment object
+    const newComment = {
+      id: 'cmt-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
+      name: authorVal,
+      text: commentVal,
+      time: 'Just now',
+      timestamp: Date.now(),
+      isDemo: false
+    };
+
+    // Prepend newest comment
+    comments.unshift(newComment);
+    saveComments(comments);
+    renderComments();
+
+    // Reset Form
+    form.reset();
+    charCounter.textContent = '0';
+    charCounter.classList.remove('warning');
+    nameInput.classList.remove('input-error');
+    textInput.classList.remove('input-error');
+
+    // Show subtle success feedback
+    showSuccessAlert();
+
+    // Mascot reaction if active
+    if (typeof window.triggerNovaReaction === 'function') {
+      window.triggerNovaReaction("Love that perspective! Thanks for sharing! 💬🎉", "cheering", "💬");
+    }
+  });
+
+  // Initial render
+  renderComments();
+}
+
 

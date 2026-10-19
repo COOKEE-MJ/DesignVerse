@@ -897,6 +897,126 @@
         </div>
       </div>
     </section>
+
+    <!-- ======================================================================
+         COMMENTS SECTION (The Conversation Continues)
+         ====================================================================== -->
+    <section class="section-comments" id="comments" aria-labelledby="comments-heading">
+      <div class="container">
+        <div class="comments-layout">
+          <!-- Section Header -->
+          <div class="comments-header">
+            <div class="label-tag">
+              <span class="dot"></span>
+              THE CONVERSATION CONTINUES
+            </div>
+            <h2 class="section-title" id="comments-heading">
+              What's on your <span class="comment-title-highlight">mind?</span>
+            </h2>
+            <p class="comments-intro-text">
+              Have a thought, an idea, or something you're excited about? We'd love to hear it.
+            </p>
+          </div>
+
+          <!-- Editorial Form Card -->
+          <div class="comments-form-card">
+            <div class="comments-form-header">
+              <div class="comments-form-title-group">
+                <span class="comments-form-badge">Open Discussion</span>
+                <span class="comments-form-subtext">Share your festival ideas & design thoughts</span>
+              </div>
+              <div class="comments-storage-note">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Stored locally on this browser</span>
+              </div>
+            </div>
+
+            <form id="comment-form" class="comment-form" novalidate>
+              <div class="comment-form-group">
+                <div class="comment-field-header">
+                  <label for="comment-name" class="comment-label">Your Name</label>
+                  <span class="comment-field-hint" id="name-hint">Max 50 characters</span>
+                </div>
+                <input 
+                  type="text" 
+                  id="comment-name" 
+                  name="author" 
+                  class="comment-input" 
+                  placeholder="e.g. Maya Lin or Alex Chen" 
+                  maxlength="50" 
+                  autocomplete="name"
+                  aria-describedby="name-hint"
+                  required
+                />
+                <span class="comment-error" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="comment-form-group">
+                <div class="comment-field-header">
+                  <label for="comment-text" class="comment-label">Your Thought</label>
+                  <div class="comment-counter-wrap">
+                    <span id="comment-char-count" class="comment-counter">0</span><span class="comment-counter-max"> / 400</span>
+                  </div>
+                </div>
+                <textarea 
+                  id="comment-text" 
+                  name="comment" 
+                  class="comment-textarea" 
+                  rows="4" 
+                  placeholder="Share a project idea, question for a speaker, or what brings you to DesignVerse..." 
+                  maxlength="400" 
+                  required
+                ></textarea>
+                <span class="comment-error" id="comment-error" aria-live="polite"></span>
+              </div>
+
+              <div class="comment-form-footer">
+                <p class="comment-guideline">
+                  Keep it constructive, respectful, and design-minded.
+                </p>
+                <button type="submit" class="btn btn-primary comment-submit-btn" id="comment-submit-btn">
+                  <span>Share Your Thoughts</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Inline Success Toast / Alert -->
+              <div id="comment-success-alert" class="comment-success-alert" role="status" aria-live="polite" hidden>
+                <div class="comment-alert-icon">✓</div>
+                <div class="comment-alert-content">
+                  <strong>Thought shared!</strong>
+                  <span>Your perspective has been added to the local conversation feed below.</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Editorial Divider & Counter -->
+          <div class="comments-feed-header">
+            <div class="comments-feed-title-wrap">
+              <h3 class="comments-feed-title">Perspectives & Ideas</h3>
+              <span class="comments-count-badge" id="comments-count-badge">0 Thoughts</span>
+            </div>
+            <div class="comments-feed-line" aria-hidden="true"></div>
+          </div>
+
+          <!-- Dynamic Comments Feed -->
+          <div id="comments-feed" class="comments-feed" aria-live="polite">
+            <!-- Dynamic comment cards inserted by JavaScript -->
+          </div>
+
+          <!-- Empty State (shown when zero comments exist) -->
+          <div id="comments-empty-state" class="comments-empty-state" hidden>
+            <div class="empty-state-icon" aria-hidden="true">💭</div>
+            <p class="empty-state-title">Your perspective belongs here.</p>
+            <p class="empty-state-text">Be the first to share a thought with the community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ======================================================================
