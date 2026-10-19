@@ -1802,22 +1802,6 @@ nav[aria-label="Primary Navigation"] {
   color: var(--color-charcoal-muted);
 }
 
-.comments-storage-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  color: var(--color-charcoal-muted);
-  background: var(--color-canvas-subtle);
-  padding: 0.28rem 0.7rem;
-  border-radius: 20px;
-  border: 1px solid rgba(32, 33, 39, 0.08);
-}
-
-.comments-storage-note svg {
-  color: var(--color-cobalt);
-}
-
 /* Form Fields */
 .comment-form-group {
   margin-bottom: 1.25rem;
