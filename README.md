@@ -6,6 +6,12 @@ A responsive, editorial frontend landing page for a premier student festival cel
 
 ---
 
+## 📸 Preview
+
+![DesignVerse Landing Page Preview](assets/preview.png)
+
+---
+
 ## Website Architecture & User Flow
 
 ```mermaid
