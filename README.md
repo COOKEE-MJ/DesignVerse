@@ -2,6 +2,8 @@
 
 A responsive, editorial frontend landing page for a premier student festival celebrating design, creativity, experimentation, and emerging technology.
 
+🌐 **Live Website**: [https://cookee-mj.github.io/DesignVerse/](https://cookee-mj.github.io/DesignVerse/)
+
 ---
 
 ## Website Architecture & User Flow
