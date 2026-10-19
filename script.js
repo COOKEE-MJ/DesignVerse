@@ -456,7 +456,7 @@ function initLiveMascot() {
   const motionConfigs = {
     standing: {
       pose: 'standing',
-      defaultMsg: "Exploring with you! ✨",
+      defaultMsg: null,
       emote: '✨'
     },
     waving: {
@@ -633,10 +633,10 @@ function initLiveMascot() {
   // --- Direct Mascot Click: Interactive Dialogue & Pose Cycle ---
   // Cycles through rich expressions and poses, including sitting gracefully!
   const mascotClickInteractions = [
-    { motion: 'sitting', msg: "Taking a cozy seat on my holo-ring! Take your time exploring 🧘✨", emote: '✨', isRest: true },
+    { motion: 'sitting', msg: "Relaxing on my holo-ring! Settle in and enjoy 🧘✨", emote: '✨', isRest: true },
     { motion: 'cheering', msg: "Pure design energy! You've got this! 🎉🙌", emote: '🎉', duration: 2600 },
     { motion: 'thinking', msg: "What if we prototype tomorrow's ideas today? 💡", emote: '💡', duration: 2500 },
-    { motion: 'waving', msg: "Hey there! Having fun exploring DesignVerse? 👋✨", emote: '👋', duration: 2200 },
+    { motion: 'waving', msg: "Hey! Ready for festival day on 14 Nov? 👋🎉", emote: '👋', duration: 2200 },
     { motion: 'twirling', msg: "Starlight spin! Pure keyframe magic! ✨💃", emote: '✨', duration: 1800 }
   ];
   let clickIndex = 0;
@@ -670,8 +670,15 @@ function initLiveMascot() {
         updateMascotPlacement('left');
         setMascotMotion('cheering', "Awesome choice! Let's get your pass! 🎟️🎉", '🎉', 2800);
       } else {
-        // Gentle thoughtful reaction
-        setMascotMotion('thinking', "Exploring more details! 💡", '💡', 2000);
+        // Varied, lively reactions to user actions (no repetitive phrases)
+        const quickReactions = [
+          { msg: "Ooh, good find! 💡", emote: '💡' },
+          { msg: "Love this part! ✨", emote: '✨' },
+          { msg: "Checking this out! 🔍", emote: '🔍' },
+          { msg: "Nice choice! 🎨", emote: '🎨' }
+        ];
+        const r = quickReactions[Math.floor(Math.random() * quickReactions.length)];
+        setMascotMotion('thinking', r.msg, r.emote, 2000);
       }
     });
   });
