@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignVerse — Student Design & Innovation Fest · Edition 01</title>
+  <meta name="description" content="DesignVerse is a student design & innovation fest celebrating creativity, experimentation, and emerging technology. 14 November 2026 at Design Studio Hall, New Delhi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER / NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="DesignVerse Home">
+        <span class="logo-design">DESIGN</span><span class="logo-verse">VERSE</span>
+        <span class="logo-badge">Ed. 01</span>
+      </a>
+
+      <!-- Desktop Links: Designer Neon Capsule Navigation -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li>
+            <a href="#about" class="nav-link">
+              <span class="nav-num">01</span>
+              <span class="nav-label">About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#experiences" class="nav-link">
+              <span class="nav-num">02</span>
+              <span class="nav-label">Experiences</span>
+            </a>
+          </li>
+          <li>
+            <a href="#schedule" class="nav-link">
+              <span class="nav-num">03</span>
+              <span class="nav-label">Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="nav-link">
+              <span class="nav-num">04</span>
+              <span class="nav-label">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-open-modal="registration">
+          Register Now
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li>
+        <a href="#about" class="mobile-nav-link">
+          About
+          <span style="font-size: 1rem; color: var(--color-cobalt);">01</span>
+        </a>
+      </li>
+      <li>
+        <a href="#experiences" class="mobile-nav-link">
+          Experiences
+          <span style="font-size: 1rem; color: var(--color-cobalt);">02</span>
+        </a>
+      </li>
+      <li>
+        <a href="#schedule" class="mobile-nav-link">
+          Schedule
+          <span style="font-size: 1rem; color: var(--color-cobalt);">03</span>
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="mobile-nav-link">
+          FAQ
+          <span style="font-size: 1rem; color: var(--color-cobalt);">04</span>
+        </a>
+      </li>
+    </ul>
+
+    <div style="margin-top: 2rem;">
+      <button class="btn btn-primary" style="width: 100%; justify-content: center;" data-open-modal="registration">
+        Register Now
+      </button>
+    </div>
+
+    <div class="mobile-footer-info">
+      <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted);">
+        Design Studio Hall, New Delhi · 14 November 2026
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- 1. HERO SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-blob-blue-tl"></div>
+        <span class="bg-star-sparkle" style="left: 18%; top: 46%;">✦</span>
+        <div class="bg-section-tag">
+          <span class="bg-tag-title">DESIGNVERSE</span>
+          <span class="bg-tag-sub">EDITION 01</span>
+        </div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left Side: Editorial Headline, Info & CTAs -->
+        <div class="hero-left">
+          <div class="label-tag">
+            <span class="dot"></span>
+            STUDENT DESIGN &amp; INNOVATION FEST · EDITION 01
+          </div>
+
+          <h1 class="hero-headline">
+            Step into<br>
+            the world<br>
+            <span class="text-cobalt">of what’s next.</span>
+          </h1>
+
+          <p class="hero-subhead">
+            A gathering of curious minds, bold experiments, and ideas that turn into something real.
+          </p>
+
+          <!-- Compact Event Information Card -->
+          <div class="event-meta-card">
+            <div class="meta-item">
+              <span class="meta-label">DATE</span>
+              <span class="meta-value">14 November 2026</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">TIME</span>
+              <span class="meta-value">10:00 AM – 6:00 PM</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">VENUE</span>
+              <span class="meta-value">Design Studio Hall, New Delhi</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="hero-cta-group">
+            <button class="btn btn-primary" data-open-modal="registration">
+              Register for the Fest
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#experiences" class="btn btn-secondary">
+              Explore the Experience
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Ideas Take Shape Creative Showcase -->
+        <div class="hero-right">
+          <section class="ideas-stage" aria-label="Ideas Take Shape">
+            <!-- Section Header -->
+            <div class="ideas-header">
+              <span class="ideas-eyebrow">A LITTLE CURIOSITY. A LOT OF POSSIBILITIES.</span>
+              <h2 class="ideas-title">Ideas take shape<span class="text-cobalt">.</span></h2>
+              <p class="ideas-description">
+                From the first rough sketch to a fully imagined creation, discover what happens when creativity meets experimentation.
+              </p>
+            </div>
+
+            <!-- Four Creative Experience Panels Grid -->
+            <div class="ideas-panels-grid">
+              <!-- Panel 01: The Sketchbook -->
+              <article class="idea-panel panel-sketchbook" tabindex="0">
+                <div class="panel-top-row">
+                  <span class="panel-number">01</span>
+                  <span class="panel-tag">CONCEPT &amp; SKETCH</span>
+                </div>
+                <div class="panel-visual panel-visual-sketchbook" aria-hidden="true">
+                  <!-- Paper Texture with Blueprint & Sketch Annotation -->
+                  <div class="sketchbook-canvas">
+                    <svg class="sketch-wireframe" viewBox="0 0 160 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="8" y="10" width="144" height="70" rx="4" stroke="#202127" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.35"/>
+                      <circle cx="48" cy="45" r="22" stroke="#4353F5" stroke-width="1.5" stroke-dasharray="4 2"/>
+                      <polygon points="105,25 135,70 75,70" stroke="#FF6855" stroke-width="1.3" opacity="0.6"/>
+                      <path d="M 48 23 Q 85 8 115 35" stroke="#202127" stroke-width="1.1" stroke-linecap="round"/>
+                    </svg>
+                    <span class="sketch-annotation">"what if?" ✦</span>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <h3 class="panel-title">THE SKETCHBOOK</h3>
+                  <p class="panel-text">
+                    Every great idea starts somewhere. Explore concepts, illustrations, and unexpected perspectives.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Panel 02: The Playground -->
+              <article class="idea-panel panel-playground" tabindex="0">
+                <div class="panel-top-row">
+                  <span class="panel-number">02</span>
+                  <span class="panel-tag">PLAY &amp; EXPERIMENT</span>
+                </div>
+                <div class="panel-visual panel-visual-playground" aria-hidden="true">
+                  <!-- Typography & Geometric Colour Playground -->
+                  <div class="playground-art">
+                    <div class="playground-type">Aa</div>
+                    <div class="playground-palette">
+                      <span class="palette-swatch swatch-ivory" title="Ivory"></span>
+                      <span class="palette-swatch swatch-cobalt" title="Cobalt"></span>
+                      <span class="palette-swatch swatch-coral" title="Coral"></span>
+                      <span class="palette-swatch swatch-charcoal" title="Charcoal"></span>
+                    </div>
+                    <svg class="playground-geometry" viewBox="0 0 70 70" fill="none">
+                      <polygon points="35,5 65,60 5,60" fill="rgba(67, 83, 245, 0.15)" stroke="#4353F5" stroke-width="1.2"/>
+                      <circle cx="35" cy="42" r="14" fill="rgba(255, 104, 85, 0.2)" stroke="#FF6855" stroke-width="1.2"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <h3 class="panel-title">THE PLAYGROUND</h3>
+                  <p class="panel-text">
+                    Experiment with colours, layouts, typography, and digital creations.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Panel 03: The Showcase -->
+              <article class="idea-panel panel-showcase" tabindex="0">
+                <div class="panel-top-row">
+                  <span class="panel-number">03</span>
+                  <span class="panel-tag">CURATED WORKS</span>
+                </div>
+                <div class="panel-visual panel-visual-showcase" aria-hidden="true">
+                  <!-- Arranged Design Exhibition Cards & Posters -->
+                  <div class="showcase-composition">
+                    <div class="showcase-mini-poster poster-a">
+                      <span class="poster-accent"></span>
+                      <div class="poster-lines">
+                        <span class="poster-bar" style="width: 70%;"></span>
+                        <span class="poster-bar" style="width: 45%;"></span>
+                      </div>
+                    </div>
+                    <div class="showcase-mini-poster poster-b">
+                      <span class="poster-star">✦</span>
+                      <div class="poster-lines">
+                        <span class="poster-bar" style="width: 80%;"></span>
+                        <span class="poster-bar" style="width: 55%;"></span>
+                        <span class="poster-bar" style="width: 35%;"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <h3 class="panel-title">THE SHOWCASE</h3>
+                  <p class="panel-text">
+                    Discover creative projects, prototypes, and ideas brought to life by curious student minds.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT DESIGNVERSE
+         ====================================================================== -->
+    <section class="section-about" id="about">
+      <!-- 2. ABOUT SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-blob-blue-br"></div>
+        <span class="bg-star-sparkle" style="top: 6.8rem; right: clamp(1rem, 3.5vw, 3rem);">✦</span>
+        <div class="bg-section-tag">
+          <span class="bg-tag-title">ABOUT</span>
+          <span class="bg-tag-sub">/ 02</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="label-tag">
+          <span class="dot"></span>
+          CREATIVE DIRECTION
+        </div>
+
+        <div class="about-intro-grid">
+          <div>
+            <h2 class="about-heading">
+              Curiosity is where<br>everything begins.
+            </h2>
+          </div>
+          <div>
+            <p class="about-description">
+              DesignVerse brings together people who question the obvious, experiment with new possibilities, and build ideas beyond the expected.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Festival Principles -->
+        <div class="principles-grid">
+          <!-- Principle 1 -->
+          <article class="principle-card">
+            <div>
+              <div class="principle-num">PRINCIPLE 01</div>
+              <h3 class="principle-title">THINK DIFFERENTLY</h3>
+              <p class="principle-text">
+                Look past standard conventions. Reframe problems through fresh angles, speculative questions, and thoughtful curiosity.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--color-cobalt); font-weight: 600;">
+              <span>PERSPECTIVE SHIFT</span>
+              <span style="opacity: 0.4;">/</span>
+              <span>INQUIRY</span>
+            </div>
+          </article>
+
+          <!-- Principle 2 -->
+          <article class="principle-card">
+            <div>
+              <div class="principle-num">PRINCIPLE 02</div>
+              <h3 class="principle-title">EXPERIMENT FEARLESSLY</h3>
+              <p class="principle-text">
+                Treat ambiguity as material. Test ideas rapidly, embrace unexpected failures, and let trial and error guide discovery.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--color-cobalt); font-weight: 600;">
+              <span>ITERATION</span>
+              <span style="opacity: 0.4;">/</span>
+              <span>EXPLORATION</span>
+            </div>
+          </article>
+
+          <!-- Principle 3 -->
+          <article class="principle-card">
+            <div>
+              <div class="principle-num">PRINCIPLE 03</div>
+              <h3 class="principle-title">BUILD SOMETHING REAL</h3>
+              <p class="principle-text">
+                Move from pure abstraction into tangible form. Translate speculative dreams into interactive prototypes that touch human lives.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--color-cobalt); font-weight: 600;">
+              <span>PROTOTYPING</span>
+              <span style="opacity: 0.4;">/</span>
+              <span>CRAFT</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPERIENCES SECTION
+         ====================================================================== -->
+    <section class="section-experiences" id="experiences">
+      <!-- 3. EXPERIENCES SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-section-tag">
+          <span class="bg-tag-title">EXPERIENCES</span>
+          <span class="bg-tag-sub">/ 03</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">
+            <span class="dot"></span>
+            WHAT YOU CAN EXPLORE
+          </div>
+          <h2 class="section-title">
+            Four ways to enter the unknown.
+          </h2>
+        </div>
+
+        <div class="experiences-grid">
+          <!-- Experience 01 -->
+          <div class="experience-card">
+            <div>
+              <div class="exp-top-row">
+                <span class="exp-number">01</span>
+                <div class="exp-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="exp-title">DESIGN SPRINT</h3>
+              <p class="exp-desc">
+                Turn a bold idea into a concept through rapid creative exploration.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="exp-tag">Speed Prototyping</span>
+              <span class="exp-tag">Concept Mapping</span>
+              <span class="exp-tag">Collaborative Sprint</span>
+            </div>
+          </div>
+
+          <!-- Experience 02 -->
+          <div class="experience-card">
+            <div>
+              <div class="exp-top-row">
+                <span class="exp-number">02</span>
+                <div class="exp-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="exp-title">CREATIVE LAB</h3>
+              <p class="exp-desc">
+                Experiment with visual design, digital tools, and emerging technology.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="exp-tag">Generative Tools</span>
+              <span class="exp-tag">Creative Coding</span>
+              <span class="exp-tag">Interaction Design</span>
+            </div>
+          </div>
+
+          <!-- Experience 03 -->
+          <div class="experience-card">
+            <div>
+              <div class="exp-top-row">
+                <span class="exp-number">03</span>
+                <div class="exp-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="2"></circle>
+                    <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="exp-title">IDEAS ON STAGE</h3>
+              <p class="exp-desc">
+                Discover fresh perspectives on design, creativity, and innovation.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="exp-tag">Provocation Talks</span>
+              <span class="exp-tag">Lightning Debates</span>
+              <span class="exp-tag">Design Philosophy</span>
+            </div>
+          </div>
+
+          <!-- Experience 04 -->
+          <div class="experience-card">
+            <div>
+              <div class="exp-top-row">
+                <span class="exp-number">04</span>
+                <div class="exp-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="exp-title">THE SHOWCASE</h3>
+              <p class="exp-desc">
+                Explore prototypes, experiments, and imaginative student creations.
+              </p>
+            </div>
+            <div class="exp-tags">
+              <span class="exp-tag">Physical Artifacts</span>
+              <span class="exp-tag">Speculative Interfaces</span>
+              <span class="exp-tag">Peer Feedback</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EVENT SCHEDULE
+         ====================================================================== -->
+    <section class="section-schedule" id="schedule">
+      <!-- 4. SCHEDULE SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-blob-coral-tl"></div>
+        <span class="bg-star-sparkle" style="top: 22%; left: 78%;">✦</span>
+        <div class="bg-section-tag">
+          <span class="bg-tag-title">SCHEDULE</span>
+          <span class="bg-tag-sub">/ 04</span>
+        </div>
+      </div>
+
+      <div class="container schedule-container">
+        <div class="section-header" style="text-align: center; max-width: 600px; margin-inline: auto;">
+          <div class="label-tag">
+            <span class="dot"></span>
+            THE DAY, IN MOTION
+          </div>
+          <h2 class="section-title">
+            One day. Countless possibilities.
+          </h2>
+          <p style="margin-top: 0.75rem; font-size: 0.9375rem;">
+            A carefully paced sequence of immersion, dialogue, and spontaneous creation.
+          </p>
+
+          <!-- Schedule Event Date & Time Ribbon -->
+          <div class="schedule-datetime-ribbon" aria-label="Event Date and Hours">
+            <div class="schedule-datetime-pill">
+              <span class="schedule-datetime-item">
+                <svg class="schedule-datetime-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="schedule-datetime-text"><strong>14 November 2026</strong></span>
+              </span>
+              <span class="schedule-datetime-separator" aria-hidden="true">·</span>
+              <span class="schedule-datetime-item">
+                <svg class="schedule-datetime-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span class="schedule-datetime-text"><strong>10:00 AM – 6:00 PM</strong> IST</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-time">10:00 AM</div>
+            <div class="timeline-node">
+              <span class="timeline-node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Doors Open</h3>
+              <p class="timeline-details">
+                Check-in, badge collection, morning coffee, and open walk-through of the installation gallery.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-time">11:00 AM</div>
+            <div class="timeline-node">
+              <span class="timeline-node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Creative Sessions</h3>
+              <p class="timeline-details">
+                Immersive breakout workshops focusing on generative tools, typography systems, and interaction design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-time">1:00 PM</div>
+            <div class="timeline-node">
+              <span class="timeline-node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Design Sprint</h3>
+              <p class="timeline-details">
+                Fast-paced, team-based concept challenge turning speculative prompts into tangible prototypes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-time">3:00 PM</div>
+            <div class="timeline-node">
+              <span class="timeline-node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Ideas on Stage</h3>
+              <p class="timeline-details">
+                Curated student lightning talks, provocations on emerging tech, and panel discussions on near-future design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-time">5:00 PM</div>
+            <div class="timeline-node">
+              <span class="timeline-node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">The Showcase</h3>
+              <p class="timeline-details">
+                Exhibition of completed sprint creations, community critique, recognition awards, and closing celebrations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         REGISTRATION SECTION
+         ====================================================================== -->
+    <section class="section-registration" id="register">
+      <!-- 5. REGISTRATION SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-blob-cobalt-dark-r"></div>
+        <div class="bg-section-tag dark">
+          <span class="bg-tag-title">REGISTER</span>
+          <span class="bg-tag-sub">/ 05</span>
+        </div>
+      </div>
+
+      <div class="container registration-grid">
+        <!-- Left Side -->
+        <div class="reg-left">
+          <div class="label-tag dark">
+            <span class="dot"></span>
+            ADMISSION OPEN · LIMITED CAPACITY
+          </div>
+          <h2>
+            Your next idea<br>starts here.
+          </h2>
+          <p>
+            Come curious. Leave inspired. Join hundreds of students reimagining the future of design.
+          </p>
+
+          <ul class="reg-perks-list">
+            <li class="reg-perk-item">
+              <svg class="reg-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Full festival day pass with access to all 4 track experiences</span>
+            </li>
+            <li class="reg-perk-item">
+              <svg class="reg-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Design sprint materials, prototyping kits &amp; commemorative badge</span>
+            </li>
+            <li class="reg-perk-item">
+              <svg class="reg-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Dedicated student exhibition space to showcase your experimental work</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side: Integrated Live Form Card -->
+        <div class="reg-card">
+          <div class="reg-card-header">
+            <h3 class="reg-card-title">Student Registration Pass</h3>
+            <p class="reg-card-sub">Reserve your complimentary entry for Edition 01</p>
+          </div>
+
+          <form id="inpage-reg-form" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="inp-fullname" class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" id="inp-fullname" name="fullname" class="form-input" placeholder="e.g. Maya Chen" required>
+              <div id="inp-fullname-error" class="form-error-msg"></div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="inp-email" class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" id="inp-email" name="email" class="form-input" placeholder="e.g. maya@institution.edu" required>
+              <div id="inp-email-error" class="form-error-msg"></div>
+            </div>
+
+            <!-- College / Institution -->
+            <div class="form-group">
+              <label for="inp-college" class="form-label">College or Institution <span class="req">*</span></label>
+              <input type="text" id="inp-college" name="college" class="form-input" placeholder="e.g. National Institute of Design" required>
+              <div id="inp-college-error" class="form-error-msg"></div>
+            </div>
+
+            <!-- Year of Study -->
+            <div class="form-group">
+              <label for="inp-year" class="form-label">Year of Study <span class="req">*</span></label>
+              <select id="inp-year" name="year" class="form-select" required>
+                <option value="">Select your academic year</option>
+                <option value="1st Year">1st Year (Freshman)</option>
+                <option value="2nd Year">2nd Year (Sophomore)</option>
+                <option value="3rd Year">3rd Year (Junior)</option>
+                <option value="4th Year">4th Year (Senior)</option>
+                <option value="Postgraduate">Postgraduate / Masters</option>
+              </select>
+              <div id="inp-year-error" class="form-error-msg"></div>
+            </div>
+
+            <!-- Area of Interest -->
+            <div class="form-group">
+              <label class="form-label">Area of Interest <span class="req">*</span></label>
+              <div class="interest-pills" role="group" aria-label="Select one or more areas of interest">
+                <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">UI / UX Design</button>
+                <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Creative Coding</button>
+                <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Motion &amp; 3D</button>
+                <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Physical Computing</button>
+                <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Speculative Futures</button>
+              </div>
+              <div class="form-error-msg interest-error" id="inp-interest-error"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+              Save My Spot
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Success Confirmation State -->
+          <div class="reg-success-view">
+            <div class="success-badge-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h4 class="success-title">Spot Confirmed!</h4>
+            <p class="success-desc">
+              Your pass for DesignVerse Edition 01 has been generated. An entry pass overview is shown below:
+            </p>
+
+            <div class="ticket-pass">
+              <div class="ticket-row">
+                <span class="ticket-label">PASS ID</span>
+                <span class="ticket-val pass-code">DV26-7841</span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">ATTENDEE</span>
+                <span class="ticket-val pass-name">Maya Chen</span>
+              </div>
+              <div class="ticket-row">
+                <span class="ticket-label">INSTITUTION</span>
+                <span class="ticket-val pass-college">National Institute of Design</span>
+              </div>
+              <div class="ticket-row" style="margin-bottom: 0;">
+                <span class="ticket-label">VENUE</span>
+                <span class="ticket-val">Studio Hall, New Delhi</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-reset-form" style="color: var(--color-silver); border-color: rgba(255,255,255,0.2);">
+              Register Another Attendee
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FAQ SECTION
+         ====================================================================== -->
+    <section class="section-faq" id="faq">
+      <!-- 6. FAQ SECTION BACKGROUND (Design Sheet Blueprint) -->
+      <div class="section-bg-art" aria-hidden="true">
+        <div class="bg-blob-blue-br"></div>
+        <span class="bg-star-sparkle" style="top: 45%; left: 32%;">✦</span>
+        <div class="bg-section-tag">
+          <span class="bg-tag-title">FAQ</span>
+          <span class="bg-tag-sub">/ 06</span>
+        </div>
+      </div>
+
+      <div class="container faq-layout">
+        <!-- Left Column -->
+        <div class="faq-intro">
+          <div class="label-tag">
+            <span class="dot"></span>
+            COMMON QUESTIONS
+          </div>
+          <h2 class="section-title">
+            Good questions.<br>Clear answers.
+          </h2>
+          <p style="margin-top: 1rem; max-width: 380px;">
+            Everything you need to know about the fest, participation, and what to bring.
+          </p>
+        </div>
+
+        <!-- Right Column: Accordion -->
+        <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+          <!-- Question 1 -->
+          <div class="faq-item active">
+            <button class="faq-button" aria-expanded="true">
+              <span>What is DesignVerse?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">
+                  DesignVerse is a student-led festival celebrating design, creativity, experimentation, and emerging technology. It brings together curious minds across disciplines to explore new ideas, collaborate on rapid prototypes, and showcase experimental projects.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>Who can participate?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">
+                  Participation is open to enrolled university, college, and polytechnic students from all academic disciplines—including design, engineering, computer science, architecture, fine arts, and the humanities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>Do I need previous design experience?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">
+                  No prior design background is required. The sessions and design sprint are structured for multidisciplinary collaboration, where curiosity, diverse perspectives, and a willingness to explore matter most.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>What activities will be available?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">
+                  Attendees can participate in hands-on Creative Labs, the fast-paced collaborative Design Sprint, provocation talks and lightning debates in Ideas on Stage, and the student prototype Showcase.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-button" aria-expanded="false">
+              <span>How can I register?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <p class="faq-answer-text">
+                  You can register directly using any of the “Register Now” buttons on this page or by filling out the registration card in the Registration section. Admission is complimentary for all verified students.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (Reorganized to keep bottom-right corner clear of mascot)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <!-- 7. FOOTER BACKGROUND (Design Sheet Blueprint) -->
+    <div class="section-bg-art" aria-hidden="true">
+      <div style="position: absolute; top: -60px; left: -80px; width: 440px; height: 380px; background: radial-gradient(circle, rgba(67, 83, 245, 0.4) 0%, transparent 70%); filter: blur(50px);"></div>
+      <svg class="bg-topographic-waves" viewBox="0 0 1200 200" preserveAspectRatio="none" fill="none">
+        <path d="M 0 100 C 220 70 400 140 620 110 C 840 80 1020 130 1200 100" stroke="#4353F5" stroke-width="1.2" stroke-opacity="0.32" />
+        <path d="M 0 125 C 220 95 400 165 620 135 C 840 105 1020 155 1200 125" stroke="#4353F5" stroke-width="1.0" stroke-opacity="0.22" />
+        <path d="M 0 150 C 220 120 400 190 620 160 C 840 130 1020 180 1200 150" stroke="#DADBD9" stroke-width="0.8" stroke-opacity="0.15" />
+      </svg>
+      <span class="bg-star-sparkle" style="top: 38%; right: 26%; color: #4353F5; opacity: 0.7;">✦</span>
+    </div>
+
+    <div class="container">
+      <div class="footer-grid-layout">
+        <!-- Column 1: Brand & Identity -->
+        <div class="footer-col footer-col-brand">
+          <a href="#" class="brand-logo" aria-label="DesignVerse Home">
+            <span class="logo-design">DESIGN</span><span class="logo-verse">VERSE</span>
+            <span class="logo-badge">Ed. 01</span>
+          </a>
+          <p class="footer-tagline">
+            A student-led playground celebrating curiosity, radical experimentation, and speculative future design.
+          </p>
+          <div class="footer-pill-tag">
+            <span class="dot"></span>
+            A GATHERING OF CURIOUS MINDS
+          </div>
+        </div>
+
+        <!-- Column 2: Event Details -->
+        <div class="footer-col footer-col-event">
+          <h4 class="footer-col-title">Event Details</h4>
+          <div class="footer-meta-stack">
+            <div class="footer-meta-card">
+              <span class="footer-meta-icon">📅</span>
+              <div>
+                <strong class="footer-meta-heading">14 November 2026</strong>
+                <span class="footer-meta-sub">Single-day immersive fest</span>
+              </div>
+            </div>
+            <div class="footer-meta-card">
+              <span class="footer-meta-icon">📍</span>
+              <div>
+                <strong class="footer-meta-heading">Studio Hall, New Delhi</strong>
+                <span class="footer-meta-sub">Central Exhibition Pavilion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Navigation Links -->
+        <nav class="footer-col footer-col-nav" aria-label="Footer Navigation">
+          <h4 class="footer-col-title">Festival Links</h4>
+          <ul class="footer-links-grid">
+            <li><a href="#about" class="footer-link">01 · About Fest</a></li>
+            <li><a href="#experiences" class="footer-link">02 · Experience Tracks</a></li>
+            <li><a href="#schedule" class="footer-link">03 · Event Schedule</a></li>
+            <li><a href="#faq" class="footer-link">04 · FAQ &amp; Entry</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 4: Quick Actions & Connect -->
+        <div class="footer-col footer-col-actions">
+          <h4 class="footer-col-title">Get Involved</h4>
+          <div class="footer-buttons-group">
+            <button class="btn btn-primary footer-reg-btn" data-open-modal="registration">
+              Register for Free 🎟️
+            </button>
+            <button class="back-to-top-btn" aria-label="Scroll back to the top of the page">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+              <span>Back to Top</span>
+            </button>
+            <div class="footer-status-indicator">
+              <span class="status-pulse-dot"></span>
+              <span>Complimentary Student Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Row: Full width balanced -->
+      <div class="footer-bottom-row">
+        <div class="footer-copy-text">
+          <span>&copy; 2026 DESIGNVERSE · Student Design &amp; Innovation Fest · Edition 01</span>
+          <span class="footer-dot">•</span>
+          <span>Complimentary student admission</span>
+        </div>
+        <div class="footer-easter-egg" style="font-family: var(--font-hand); font-size: 1.15rem; color: #4353F5; transform: rotate(-2deg); display: inline-flex; align-items: center; gap: 0.35rem;">
+          Subtle details make a big difference! ☺
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       ACCESSIBLE REGISTRATION MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="registration-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="reg-card-header">
+        <h3 class="reg-card-title" id="modal-title">Register for DesignVerse</h3>
+        <p class="reg-card-sub">Student Design &amp; Innovation Fest · Edition 01</p>
+      </div>
+
+      <form id="modal-reg-form" novalidate>
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="modal-fullname" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="modal-fullname" name="fullname" class="form-input" placeholder="e.g. Maya Chen" required>
+          <div id="modal-fullname-error" class="form-error-msg"></div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="modal-email" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="modal-email" name="email" class="form-input" placeholder="e.g. maya@institution.edu" required>
+          <div id="modal-email-error" class="form-error-msg"></div>
+        </div>
+
+        <!-- College / Institution -->
+        <div class="form-group">
+          <label for="modal-college" class="form-label">College or Institution <span class="req">*</span></label>
+          <input type="text" id="modal-college" name="college" class="form-input" placeholder="e.g. National Institute of Design" required>
+          <div id="modal-college-error" class="form-error-msg"></div>
+        </div>
+
+        <!-- Year of Study -->
+        <div class="form-group">
+          <label for="modal-year" class="form-label">Year of Study <span class="req">*</span></label>
+          <select id="modal-year" name="year" class="form-select" required>
+            <option value="">Select your academic year</option>
+            <option value="1st Year">1st Year (Freshman)</option>
+            <option value="2nd Year">2nd Year (Sophomore)</option>
+            <option value="3rd Year">3rd Year (Junior)</option>
+            <option value="4th Year">4th Year (Senior)</option>
+            <option value="Postgraduate">Postgraduate / Masters</option>
+          </select>
+          <div id="modal-year-error" class="form-error-msg"></div>
+        </div>
+
+        <!-- Area of Interest -->
+        <div class="form-group">
+          <label class="form-label">Area of Interest <span class="req">*</span></label>
+          <div class="interest-pills" role="group" aria-label="Select one or more areas of interest">
+            <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">UI / UX Design</button>
+            <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Creative Coding</button>
+            <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Motion &amp; 3D</button>
+            <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Physical Computing</button>
+            <button type="button" class="interest-pill" role="checkbox" aria-checked="false" tabindex="0">Speculative Futures</button>
+          </div>
+          <div class="form-error-msg interest-error" id="modal-interest-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Save My Spot
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Success Confirmation State in Modal -->
+      <div class="reg-success-view">
+        <div class="success-badge-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h4 class="success-title">Spot Confirmed!</h4>
+        <p class="success-desc">
+          Your pass for DesignVerse Edition 01 has been generated. An entry pass overview is shown below:
+        </p>
+
+        <div class="ticket-pass">
+          <div class="ticket-row">
+            <span class="ticket-label">PASS ID</span>
+            <span class="ticket-val pass-code">DV26-7841</span>
+          </div>
+          <div class="ticket-row">
+            <span class="ticket-label">ATTENDEE</span>
+            <span class="ticket-val pass-name">Maya Chen</span>
+          </div>
+          <div class="ticket-row">
+            <span class="ticket-label">INSTITUTION</span>
+            <span class="ticket-val pass-college">National Institute of Design</span>
+          </div>
+          <div class="ticket-row" style="margin-bottom: 0;">
+            <span class="ticket-label">VENUE</span>
+            <span class="ticket-val">Studio Hall, New Delhi</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-secondary btn-reset-form" style="color: var(--color-silver); border-color: rgba(255,255,255,0.2);">
+          Register Another Attendee
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       LIVE MASCOT BUDDY: NOVA (Continuous Interactive Live Companion)
+       ====================================================================== -->
+  <aside id="live-mascot" class="live-mascot" aria-label="DesignVerse Live Companion Mascot">
+    <!-- Dynamic Compact Interactive Talk & Joke Bubble -->
+    <div class="mascot-speech-cloud" id="mascot-bubble" role="status" aria-live="polite">
+      <div class="bubble-header">
+        <span class="bubble-mascot-name">✨ NOVA</span>
+        <button type="button" class="btn-bubble-close" id="mascot-bubble-close" aria-label="Dismiss message">✕</button>
+      </div>
+      <p class="bubble-text" id="mascot-text">
+        Tap me or explore the site! ✨
+      </p>
+    </div>
+
+    <!-- Mascot Character Stage & Interactive Avatar -->
+    <div class="mascot-stage" id="mascot-stage" tabindex="0" role="button" aria-label="Interact with Nova the mascot">
+      <!-- Stardust Sparkle Emitter Aura & Footstep Ripples -->
+      <div class="mascot-aura"></div>
+      <div class="mascot-footsteps" id="mascot-footsteps"></div>
+      <div class="mascot-particles" id="mascot-particles"></div>
+
+      <!-- Multi-Pose Character Avatar Layers with Seamless State Transitions -->
+      <div class="mascot-avatar-wrapper" id="mascot-avatar-wrap">
+        <!-- Standing / Waving / Walking Base Layer -->
+        <img 
+          src="assets/mascot-buddy.png" 
+          alt="Nova Standing and Waving"
+          class="mascot-pose-layer pose-standing active"
+          id="pose-standing"
+          draggable="false"
+        >
+        <!-- Thinking / Pondering Pose Layer -->
+        <img 
+          src="assets/mascot-thinking.png" 
+          alt="Nova Thinking"
+          class="mascot-pose-layer pose-thinking"
+          id="pose-thinking"
+          draggable="false"
+        >
+        <!-- Cheering / Excited Victory Pose Layer -->
+        <img 
+          src="assets/mascot-cheering.png" 
+          alt="Nova Cheering and Excited"
+          class="mascot-pose-layer pose-cheering"
+          id="pose-cheering"
+          draggable="false"
+        >
+        <!-- Sitting on Holographic Ring Pose Layer -->
+        <img 
+          src="assets/mascot-sitting.png" 
+          alt="Nova Sitting Gracefully on Holographic Ring"
+          class="mascot-pose-layer pose-sitting"
+          id="pose-sitting"
+          draggable="false"
+        >
+
+        <!-- Dynamic Emote Icon Balloon (Thought bubble / lightbulb / music / sparkles) -->
+        <div class="mascot-emote-bubble" id="mascot-emote" aria-hidden="true">
+          <span class="emote-symbol">💡</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Minimizer / Toggle -->
+    <button type="button" class="mascot-toggle-btn" id="mascot-toggle-btn" aria-label="Toggle mascot view" title="Minimize / Expand Nova">
+      <span class="toggle-icon">▼</span>
+    </button>
+  </aside>
+
+  <!-- Interactive Click Sparkle Canvas / Container -->
+  <div id="sparkle-container" class="sparkle-container" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
